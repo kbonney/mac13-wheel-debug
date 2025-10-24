@@ -1,7 +1,7 @@
 #include <Python.h>
 
 static PyObject* hello(PyObject* self, PyObject* args) {
-    return PyUnicode_FromString("Hello, macOS build!");
+    return PyUnicode_FromString("Hello from cibuildwheel!");
 }
 
 static PyMethodDef HelloMethods[] = {
@@ -11,12 +11,12 @@ static PyMethodDef HelloMethods[] = {
 
 static struct PyModuleDef hellomodule = {
     PyModuleDef_HEAD_INIT,
-    "hello",
+    "hello_cibw",
     NULL,
     -1,
     HelloMethods
 };
 
-PyMODINIT_FUNC PyInit_hello(void) {
+PyMODINIT_FUNC PyInit_hello_cibw(void) {
     return PyModule_Create(&hellomodule);
 }

@@ -1,6 +1,7 @@
 name: cibuildwheel macOS13 repro
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
